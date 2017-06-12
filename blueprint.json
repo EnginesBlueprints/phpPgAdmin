@@ -1,1 +1,100 @@
-{"software":{"name":"phppgadmin","major":null,"minor":1,"release_level":"Release candidate","patch":null,"license_name":"gnu_general_public_license_v3","license_label":"GNU GENERAL PUBLIC LICENSE V3","license_sourceurl":"http://www.gnu.org/copyleft/gpl.html","full_title":"PHP PostgreSQL Admin","short_title":"phpPgAdmin","description":"phpPgAdmin is a web-based administration tool for PostgreSQL. It is perfect for PostgreSQL DBAs, newbies, and hosting services.","icon_url":"http://phppgadmin.sourceforge.net/lib/tpl/ppa/images/ppa.gif","home_page_url":"","support_page_url":"","about":"","language":"php","framework":"apache_php","deployment_type":"web","web_root_directory":null,"first_run_url":null,"publisher":"engines","blocking_worker_name":null,"required_memory":64,"recommended_memory":96,"http_protocol":"http_and_https","framework_port_overide":null,"custom_start_script":"","custom_install_script":"","custom_post_install_script":"","service_configurations":[{"publisher_namespace":"EnginesSystem","type_path":"database/sql/pgsql","variables":{"full_access":"0","database_host":"_Engines_System(pgsql_host)","database_name":"_Engines_Builder(engine_name)","dbusername":"_Engines_Builder(engine_name)","dbpassword":"_Engines_System(random(10))","db_flavor":"pgsql","encoding":"ascii","collation":"C"}}],"persistent_directories":[],"replacement_strings":[{"replacement_string":"/conf.*servers.*host.*/s//conf['servers'][0]['host']='_Engines_System(pgsql_host)';/","file":"conf/config.inc.php","destination":"conf/config.inc.php"}],"persistent_files":[],"installed_packages":[{"name":"phpPgAdmin-5.1.tar.bz2","source_url":"http://downloads.sourceforge.net/project/phppgadmin/phpPgAdmin%20%5Bstable%5D/phpPgAdmin-5.1/phpPgAdmin-5.1.tar.bz2","destination":"./","extraction_command":"tar -xpf","path_to_extracted":"phpPgAdmin-5.1"}],"system_packages":[{"package":"php-pgsql"}],"workers":[],"ports":[],"external_repositories":[],"rake_tasks":[],"template_files":[],"file_write_permissions":[],"custom_php_inis":[],"apache_htaccess_files":[],"apache_httpd_configurations":[],"modules":[],"variables":[],"component_sources":[],"component_path":"","extract_components":false,"installation_report_template":"built _Engines_Builder(engine_name) goto to _Engines_Builder(http_protocol)://_Engines_Builder(fqdn) Login as rma or with an Engines mqsql service's credentials  built ","continuous_deployment":false,"database_seed_file":"","actionators":{}}}
+{
+  "schema": {
+    "type": "app_blueprint",
+    "version": {
+      "major": 1,
+      "minor": 0
+    },
+    "origin": "Engines Developer Studio 0.2"
+  },
+  "metadata": {
+    "blueprint": {
+      "version": {
+        "major": 0,
+        "minor": 1,
+        "level": "rc",
+        "patch": 0
+      }
+    },
+    "software": {
+      "display": {
+        "title": "PHP PostgreSQL Admin",
+        "label": "phpPgAdmin",
+        "description": "phpPgAdmin is a web-based administration tool for PostgreSQL. It is perfect for PostgreSQL DBAs, newbies, and hosting services."
+      },
+      "license": {
+        "label": "GNU GENERAL PUBLIC LICENSE V3",
+        "url": "http://www.gnu.org/copyleft/gpl.html"
+      }
+    },
+    "timestamp": "2017-06-12 00:51:10 UTC"
+  },
+  "software": {
+    "base": {
+      "name": "phppgadmin",
+      "framework": "apache_php",
+      "deployment_type": "web",
+      "http_protocol": "http_and_https",
+      "memory": {
+        "required": 64,
+        "recommended": 96
+      },
+      "installation_report": "built _Engines_Builder(engine_name) goto to _Engines_Builder(http_protocol)://_Engines_Builder(fqdn) Login as rma or with an Engines mqsql service's credentials  built "
+    },
+    "scripts": {
+      "start": {
+        "language": "sh"
+      },
+      "install": {
+        "language": "sh"
+      },
+      "post_install": {
+        "language": "sh"
+      },
+      "shutdown": {
+        "language": "sh"
+      }
+    },
+    "system_packages": [
+      {
+        "package": "php-pgsql"
+      }
+    ],
+    "installed_packages": [
+      {
+        "name": "phpPgAdmin-5.1.tar.bz2",
+        "source_url": "http://downloads.sourceforge.net/project/phppgadmin/phpPgAdmin%20%5Bstable%5D/phpPgAdmin-5.1/phpPgAdmin-5.1.tar.bz2",
+        "destination": "./",
+        "extraction_command": "tar -xpf",
+        "path_to_extracted": "phpPgAdmin-5.1"
+      }
+    ],
+    "service_configurations": [
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "database/sql/pgsql",
+        "variables": {
+          "collation": "en_GB",
+          "encoding": "utf8",
+          "dbpassword": "_Engines_System(random(10))",
+          "full_access": "true",
+          "rails_flavor": "postgres",
+          "database_host": "_Engines_System(pgsql_host)",
+          "database_name": "_Engines_Builder(engine_name)",
+          "db_flavor": "pgsql",
+          "dbusername": "_Engines_Builder(engine_name)"
+        }
+      }
+    ],
+    "replacement_strings": [
+      {
+        "string": "/conf.*servers.*host.*/s//conf['servers'][0]['host']='_Engines_System(pgsql_host)';/",
+        "source_file": "conf/config.inc.php",
+        "destination_file": "conf/config.inc.php"
+      }
+    ],
+    "database_seed": {
+      "language": "text"
+    }
+  }
+}
