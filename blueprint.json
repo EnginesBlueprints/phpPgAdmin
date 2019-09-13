@@ -2,8 +2,8 @@
   "schema": {
     "type": "app_blueprint",
     "version": {
-      "major": 1,
-      "minor": 0
+      "major": 0,
+      "minor": 1
     },
     "origin": "Engines Developer Studio 0.2"
   },
@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2017-06-12 00:51:10 UTC"
+    "timestamp": "2019-09-13T13:34:37+10:00"
   },
   "software": {
     "base": {
@@ -74,15 +74,13 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "database/sql/pgsql",
         "variables": {
+          "database_name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(pgsql_host)",
+          "dbusername": "_Engines_Builder(engine_name)",
+          "dbpassword": "_Engines_System(random(10))",
           "collation": "en_GB",
           "encoding": "utf8",
-          "dbpassword": "_Engines_System(random(10))",
-          "full_access": "true",
-          "rails_flavor": "postgres",
-          "database_host": "_Engines_System(pgsql_host)",
-          "database_name": "_Engines_Builder(engine_name)",
-          "db_flavor": "pgsql",
-          "dbusername": "_Engines_Builder(engine_name)"
+          "full_access": "true"
         }
       }
     ],
