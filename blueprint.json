@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2019-09-23T13:42:34+10:00"
+    "timestamp": "2019-09-23T14:03:03+10:00"
   },
   "software": {
     "base": {
@@ -88,7 +88,7 @@
     "replacement_strings": [
       {
         "string": "/conf.*servers.*host.*/s//conf['servers'][0]['host']='_Engines_System(pgsql_host)';/",
-        "source_file": "conf/config.inc.php",
+        "source_file": "conf/config.inc.php-dist",
         "destination_file": "conf/config.inc.php"
       }
     ],
